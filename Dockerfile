@@ -2,7 +2,7 @@
 FROM debian:jessie
 LABEL maintainer "Christophe Boucharlat <christophe.boucharlat@gmail.com>"
 
-# Discord Version 0.0.4
+# Discord Version 0.0.10
 
 RUN apt-get update && apt-get install -y \
     apt-utils \
@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN wget https://dl.discordapp.net/apps/linux/0.0.4/discord-0.0.4.tar.gz -O /tmp/discord.tar.gz && \
+RUN wget https://dl.discordapp.net/apps/linux/0.0.10/discord-0.0.10.tar.gz -O /tmp/discord.tar.gz && \
     cd /tmp/ && \
     tar xvzf /tmp/discord.tar.gz && \
     rm /etc/fonts/conf.d/10-scale-bitmap-fonts.conf && \
